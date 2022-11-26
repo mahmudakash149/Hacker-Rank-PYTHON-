@@ -1,0 +1,19 @@
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    if query_name in student_marks:
+        index_num = list(student_marks).index(query_name)
+    values = []
+    values = list(student_marks.values())[index_num]
+    sum = 0
+    for i in range(len(values)):
+        sum = sum + values[i]
+    x = sum/len(values)
+    rounded_x = format(x, '.2f')
+    print(rounded_x)
+        
