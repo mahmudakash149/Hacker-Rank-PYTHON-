@@ -1,0 +1,13 @@
+import numpy
+x,y,z = map(int, input().split())
+list1 = []
+list2 = []
+for i in range (x):
+    a = list(map(int, input().split()))
+    list1.append(a)
+for i in range (y):
+    b = list(map(int, input().split()))
+    list2.append(b)
+array_1 = numpy.array(list1)
+array_2 = numpy.array(list2)
+print(numpy.concatenate((array_1,array_2),axis=0))
